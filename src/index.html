@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <h3 class="text-3xl font-bold m-3">Bài tập 1: QUẢN LÝ TUYỂN SINH</h3>
+    <form action="">
+        <div class="my-5 mx-5">
+            <input type="number" class="" id="diemChuan" placeholder="Điểm chuẩn">
+        </div>
+        <div class="my-5 mx-5">
+            <select name="" id="chonKhuVuc">
+                <option value="0">
+                    Chọn khu vực
+                </option>
+                <option value="2">
+                    A
+                </option>
+                <option value="1">
+                    B
+                </option>
+                <option value="0.5">
+                    C
+                </option>
+            </select>
+        </div>
+        <div class="my-5 mx-5">
+            <select name="" id="chonDoiTuong">
+                <option value="0">
+                    Chọn đối tượng
+                </option>
+                <option value="2.5">
+                    1
+                </option>
+                <option value="1.5">
+                    2
+                </option>
+                <option value="1">
+                    3
+                </option>
+            </select>
+        </div>
+        <div class="my-5 mx-5">
+            <input type="number" id="diemMonThu-1" placeholder="Điểm môn thứ 1">
+        </div>
+        <div class="my-5 mx-5">
+            <input type="number" id="diemMonThu-2" placeholder="Điểm môn thứ 2">
+        </div>
+        <div class="my-5 mx-5">
+            <input type="number" id="diemMonThu-3" placeholder="Điểm môn thứ 3">
+        </div>
+        <div class="">
+            <button
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn btn--primary me-1 my-5 mx-5"
+                type="button" id="btnResult">Kết Quả</button>
+        </div>
+        <div class="my-5 mx-5 border-solid border-neutral-950 border-2" role="alert">
+            👉<span id="txtResult"></span>
+        </div>
+    </form>
+    <hr>
+    <h3 class="text-3xl font-bold m-3">Bài tập 2: TÍNH TIỀN ĐIỆN</h3>
+    <form action="">
+        <div class="my-5 mx-5">
+            <input type="text" id="nhapHoTen" placeholder="Nhập họ tên">
+        </div>
+        <div class="my-5 mx-5">
+            <input type="number" id="soKW" placeholder="Nhập số kw">
+        </div>
+        <div class="">
+            <button
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn btn--primary me-1 my-5 mx-5"
+                type="button" id="btnResult">Tính tiền điện</button>
+        </div>
+        <div class="my-5 mx-5 border-solid border-neutral-950 border-2" role="alert">
+            👉<span id="txtResult"></span>
+        </div>
+    </form>
+    <hr>
+    <h3 class="text-3xl font-bold m-3">Bài tập 2: TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+    <form action="">
+        <div class="my-5 mx-5">
+            <input type="text" id="nhapHoTen" placeholder="Nhập họ tên">
+        </div>
+        <div class="my-5 mx-5">
+            <input type="number" id="tongThuNhapNam" placeholder="Tổng thu nhập năm">
+        </div>
+        <div class="my-5 mx-5">
+            <input type="number" id="soNguoiPhuThuoc" placeholder="Số người phụ thuộc">
+        </div>
+        <div class="">
+            <button
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn btn--primary me-1 my-5 mx-5"
+                type="button" id="btnResult">Tính tiền thuế</button>
+        </div>
+        <div class="my-5 mx-5 border-solid border-neutral-950 border-2" role="alert">
+            👉<span id="txtResult"></span>
+        </div>
+    </form>
+    <hr>
+    <h3 class="text-3xl font-bold m-3">Bài tập 4: TÍNH TIỀN CÁP</h3>
+    <form action="">
+        <div class="my-5 mx-5">
+            <select name="" id="loaiKhachHang" onchange="disableInput()">
+                <option value="">
+                    Chọn loại khách hàng
+                </option>
+                <option value="user">
+                    Nhà Dân
+                </option>
+                <option value="company">
+                    Doanh Nghiệp
+                </option>
+            </select>
+        </div>
+        <div class="my-5 mx-5">
+            <input type="number" id="diemMonThu-2" placeholder="Điểm môn thứ 2">
+        </div>
+        <div class="my-5 mx-5">
+            <input type="number" id="diemMonThu-3" placeholder="Điểm môn thứ 3">
+        </div>
+        <div class="">
+            <button
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn btn--primary me-1 my-5 mx-5"
+                type="button" id="btnResult">Tính tiền cáp</button>
+        </div>
+        <div class="my-5 mx-5 border-solid border-neutral-950 border-2" role="alert">
+            👉<span id="txtResult"></span>
+        </div>
+    </form>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
