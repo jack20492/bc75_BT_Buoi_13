@@ -75,10 +75,10 @@ function tinhThueTNCN() {
   let hoTen_1 = document.getElementById("nhapHoTen_1").value;
   let tongThuNhapNam = document.getElementById("tongThuNhapNam").value * 1;
   let soNguoiPhuThuoc = document.getElementById("soNguoiPhuThuoc").value * 1;
-  let thuNhapChiuThue = tongThuNhapNam - 4000000 - soNguoiPhuThuoc * 1600000;
+  let thuNhapChiuThue = tongThuNhapNam - 4e6 - soNguoiPhuThuoc * 1600000;
 
   let thueTNCN;
-  if (thuNhapChiuThue <= 60000000) {
+  if (thuNhapChiuThue > 0 && thuNhapChiuThue <= 60000000) {
     thueTNCN = thuNhapChiuThue * 0.05;
   } else if (thuNhapChiuThue > 60000000 && thuNhapChiuThue <= 120000000) {
     thueTNCN = thuNhapChiuThue * 0.1;
@@ -93,11 +93,31 @@ function tinhThueTNCN() {
   } else if (thuNhapChiuThue > 960000000) {
     thueTNCN = thuNhapChiuThue * 0.35;
   } else {
-    thueTNCN = "Số tiền nhập không hợp lệ";
+    alert("Số tiền nhập không hợp lệ");
   }
 
   let formatTienThue = Intl.NumberFormat().format(thueTNCN);
 
   const txtResult_2 = document.getElementById("txtResult_2");
   txtResult_2.innerHTML = `Họ tên: ${hoTen_1}. Tiền thuế thu nhập cá nhân: ${formatTienThue} VND.`;
+}
+
+// Bài tập 4: TÍNH TIỀN CÁP
+
+function tinhTienCap() {
+  let loaiKhachHang = document.getElementById("loaiKhachHang").value;
+  let maKhachHang = document.getElementById("maKhachHang").value;
+  let soKenhCaoCap = document.getElementById("soKenhCaoCap").value * 1;
+  let soKetNoi = document.getElementById("soKetNoi").value * 1;
+
+  let tienCap;
+
+  if (loaiKhachHang === "user") {
+    tienCap = 4.5 + 20.5 + soKenhCaoCap * 7.5;
+  } else if (loaiKhachHang === "company") {
+    tienCap = 15 + 75 + soKenhCaoCap * 50;
+  }
+
+  let txtResult_3 = document.getElementById("txtResult_3");
+  txtResult_3.innerHTML = `Mã số khách hàng: ${maKhachHang}. Số tiền: $ ${tienCap}`;
 }
