@@ -47,16 +47,16 @@
             </select>
         </div>
         <div class="my-5 mx-5">
-            <input type="number" id="diemMonThu-1" placeholder="Điểm môn thứ 1">
+            <input type="number" id="diemMonThu_1" placeholder="Điểm môn thứ 1">
         </div>
         <div class="my-5 mx-5">
-            <input type="number" id="diemMonThu-2" placeholder="Điểm môn thứ 2">
+            <input type="number" id="diemMonThu_2" placeholder="Điểm môn thứ 2">
         </div>
         <div class="my-5 mx-5">
-            <input type="number" id="diemMonThu-3" placeholder="Điểm môn thứ 3">
+            <input type="number" id="diemMonThu_3" placeholder="Điểm môn thứ 3">
         </div>
         <div class="">
-            <button
+            <button onclick="ketQuaTotNghiep ()"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn btn--primary me-1 my-5 mx-5"
                 type="button" id="btnResult">Kết Quả</button>
         </div>
@@ -74,19 +74,19 @@
             <input type="number" id="soKW" placeholder="Nhập số kw">
         </div>
         <div class="">
-            <button
+            <button onclick="tinhTienDien ()"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn btn--primary me-1 my-5 mx-5"
                 type="button" id="btnResult">Tính tiền điện</button>
         </div>
         <div class="my-5 mx-5 border-solid border-neutral-950 border-2" role="alert">
-            👉<span id="txtResult"></span>
+            👉<span id="txtResult_1"></span>
         </div>
     </form>
     <hr>
-    <h3 class="text-3xl font-bold m-3">Bài tập 2: TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+    <h3 class="text-3xl font-bold m-3">Bài tập 3: TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
     <form action="">
         <div class="my-5 mx-5">
-            <input type="text" id="nhapHoTen" placeholder="Nhập họ tên">
+            <input type="text" id="nhapHoTen_1" placeholder="Nhập họ tên">
         </div>
         <div class="my-5 mx-5">
             <input type="number" id="tongThuNhapNam" placeholder="Tổng thu nhập năm">
@@ -95,12 +95,12 @@
             <input type="number" id="soNguoiPhuThuoc" placeholder="Số người phụ thuộc">
         </div>
         <div class="">
-            <button
+            <button onclick="tinhThueTNCN()"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn btn--primary me-1 my-5 mx-5"
                 type="button" id="btnResult">Tính tiền thuế</button>
         </div>
         <div class="my-5 mx-5 border-solid border-neutral-950 border-2" role="alert">
-            👉<span id="txtResult"></span>
+            👉<span id="txtResult_2"></span>
         </div>
     </form>
     <hr>
@@ -120,10 +120,13 @@
             </select>
         </div>
         <div class="my-5 mx-5">
-            <input type="number" id="diemMonThu-2" placeholder="Điểm môn thứ 2">
+            <input type="number" id="maKhachHang" placeholder="Nhập mã khách hàng">
         </div>
         <div class="my-5 mx-5">
-            <input type="number" id="diemMonThu-3" placeholder="Điểm môn thứ 3">
+            <input type="number" id="soKenhCaoCap" placeholder="Số kênh cao cấp">
+        </div>
+        <div class="my-5 mx-5">
+            <input type="number" id="soKetNoi" placeholder="Số kết nối">
         </div>
         <div class="">
             <button
